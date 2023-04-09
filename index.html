@@ -1,0 +1,10 @@
+<script type="text/javascript" src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+<script type="text/javascript" src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+<script type="text/javascript" src='./js/gesture-detector.js'></script>
+<script type="text/javascript" src='./js/gesture-handler.js'></script>
+<a-scene embedded arjs gesture-detector>
+	<a-marker type="pattern" url="pattern-deka.patt"  emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
+	    <a-entity gltf-model="./cologne_cathedral/scene.gltf" class="clickable" gesture-handler ></a-entity>
+	</a-marker>
+	<a-entity camera></a-entity>
+</a-scene>
